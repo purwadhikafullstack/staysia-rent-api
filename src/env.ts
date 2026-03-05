@@ -13,7 +13,7 @@ export interface Config {
   JWT_ACCESS_SECRET: string;
   JWT_REFRESH_SECRET: string;
   DATABASE_URL: string;
-  SUPABASE_DIRECT_URL: string;
+  DIRECT_URL: string;
   DOMAIN_URL: string;
   ACTIVATION_ACCOUNT_URL: string;
   NODEMAILER_APP_EMAIL: string;
@@ -40,7 +40,7 @@ const schema = Yup.object().shape({
   JWT_ACCESS_SECRET: Yup.string().required('ACCESS_SECRET is required'),
   JWT_REFRESH_SECRET: Yup.string().required('REFRESH_SECRET is required'),
   DATABASE_URL: Yup.string().required('DATABASE_URL is required'),
-  SUPABASE_DIRECT_URL: Yup.string().required('SUPABASE_DIRECT_URL is required'),
+  DIRECT_URL: Yup.string().required('DIRECT_URL is required'),
   DOMAIN_URL: Yup.string().required('DOMAIN_URL is required'),
   ACTIVATION_ACCOUNT_URL: Yup.string().required(
     'ACTIVATION_ACCOUNT_URL is required',
