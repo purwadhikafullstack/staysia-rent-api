@@ -9,7 +9,6 @@ export interface Config {
   PORT: number;
   NODE_ENV: string;
   CLIENT_URL: string;
-  LOCAL_DIRECT_URL: string;
   JWT_ACCESS_SECRET: string;
   JWT_REFRESH_SECRET: string;
   DATABASE_URL: string;
@@ -36,7 +35,6 @@ const schema = Yup.object().shape({
   PORT: Yup.number().default(2000).required(),
   NODE_ENV: Yup.string().default('development').required(),
   CLIENT_URL: Yup.string().required('CLIENT_URL is required'),
-  LOCAL_DIRECT_URL: Yup.string().required('DIRECT_URL is required'),
   JWT_ACCESS_SECRET: Yup.string().required('ACCESS_SECRET is required'),
   JWT_REFRESH_SECRET: Yup.string().required('REFRESH_SECRET is required'),
   DATABASE_URL: Yup.string().required('DATABASE_URL is required'),
